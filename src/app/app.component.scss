@@ -1,0 +1,36 @@
+.container {
+    display:flex; 
+    align-items:center;
+    justify-content:center;
+    height:100%;
+    flex-direction: column;
+    // overflow: scroll;
+    .box {
+        display:flex; 
+        align-items:center;
+        justify-content:center;
+        width: 20rem;
+        border: 1px solid gray;
+    }
+    table {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        td {
+            // flex: 1 0 7%;
+            // margin: 0.1rem;
+            // height: 1.5rem;
+            background-color: blue;
+            border: 1px solid cornflowerblue;
+            button {
+                cursor: pointer;
+                background-color: blue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 1.6rem;
+                width: 1.6rem;
+            }
+        }
+    }
+}

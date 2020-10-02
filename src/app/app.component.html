@@ -1,0 +1,19 @@
+<div class="container">
+  <div style="margin: 2rem;">
+    Minesweeper
+  </div>
+  <div class="box">
+    <table>
+        <tr *ngFor="let arr of newArr; let i = index"> 
+          <td *ngFor="let item of arr; let j = index">
+            <button *ngIf="item === 0" (click)="onClickMine(i,j)" >
+              <span *ngIf="data === 0">*</span>
+            </button>
+            <button *ngIf="item !== 0" (click)="onClickNumber(i,j)" >
+              <span *ngIf="data >= 0">{{item}}</span>
+            </button>
+          </td>
+        </tr>
+    </table>
+  </div>
+</div>
