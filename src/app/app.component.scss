@@ -4,7 +4,6 @@
     justify-content:center;
     height:100%;
     flex-direction: column;
-    // overflow: scroll;
     .box {
         display:flex; 
         align-items:center;
@@ -16,21 +15,45 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        td {
-            // flex: 1 0 7%;
-            // margin: 0.1rem;
-            // height: 1.5rem;
-            background-color: blue;
-            border: 1px solid cornflowerblue;
-            button {
-                cursor: pointer;
-                background-color: blue;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 1.6rem;
-                width: 1.6rem;
-            }
-        }
     }
+    div:first-child {
+        margin: 2rem;
+    }
+    div:last-child {
+        margin: 2rem;
+    }
+}
+img {
+    width: 2rem;
+    height: 2.2rem;
+}
+.blur {
+    filter: blur(2px);
+}
+.clickedButton {
+    background-color: darkseagreen; 
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.6rem;
+    width: 1.6rem;
+}
+.unclickedButton {
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.6rem;
+    width: 1.6rem;
+}
+.clickedtd {
+    background-color: darkseagreen; 
+    border: 1px solid #a9d7a9;
+}
+.unclickedtd {
+    background-color: blue;
+    border: 1px solid cornflowerblue;
 }

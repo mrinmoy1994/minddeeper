@@ -1,19 +1,22 @@
-<div class="container">
-  <div style="margin: 2rem;">
+<div class="container" [ngClass]="{'blur': blur}">
+  <div>
     Minesweeper
   </div>
   <div class="box">
     <table>
-        <tr *ngFor="let arr of newArr; let i = index"> 
-          <td *ngFor="let item of arr; let j = index">
-            <button *ngIf="item === 0" (click)="onClickMine(i,j)" >
-              <span *ngIf="data === 0">*</span>
-            </button>
-            <button *ngIf="item !== 0" (click)="onClickNumber(i,j)" >
-              <span *ngIf="data >= 0">{{item}}</span>
+        <tr *ngFor="let arr of valueArr; let i = index"> 
+          <td *ngFor="let item of arr; let j = index" [ngClass]="[(item.isVisible && item.value !== -1) ? 'clickedtd' : 'unclickedtd']">
+            <button (click)="onClickNumber(i,j)" [ngClass]="[(item.isVisible && item.value !== -1) ? 'clickedButton' : 'unclickedButton']">
+              <span *ngIf="item.isVisible">
+                <span *ngIf="item.value === -1"><img src="assets/mine.png"></span>
+                <span *ngIf="item.value !== 0">{{item.value}}</span>
+              </span>
             </button>
           </td>
         </tr>
     </table>
+  </div>
+  <div>
+    Your Score {{clickNumberCount}}
   </div>
 </div>
